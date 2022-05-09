@@ -1,0 +1,70 @@
+.Container {
+  background-color: var(--container);
+  position: fixed;
+  padding: 0.5rem 0.5rem;
+  left: 0;
+  height: 100%;
+  width: 15rem;
+  z-index: 100;
+  transition: all 0.5s ease;
+
+  ul{
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin-top: 1rem;
+      position: relative;
+      height: 3rem;
+      width: 100%;
+
+      a {
+        font-size: 1rem;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 100%;
+        position: absolute;
+        border-radius: 8px;
+
+        &:hover{
+          background: #000;
+        }
+
+        span{
+          font-size: 15px;
+          font-weight: 400;
+          pointer-events: none;
+          transition: 0.4s;
+          margin-left: 25px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  width: 4rem;
+
+  ul li a span {
+    opacity: 0;
+  }
+
+  &:hover {
+    width: 15rem;
+
+    ul li a span {
+      opacity: 1;
+    }
+  }
+
+ 
+}
+
+@media (max-width: 768px) {
+  .active{
+    width: 0rem;
+  }
+}

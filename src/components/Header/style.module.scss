@@ -1,0 +1,13 @@
+.Container {
+  height: 3rem;
+  background-color: var(--container);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.menuIcon{
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
